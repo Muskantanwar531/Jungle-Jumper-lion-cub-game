@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Jungle Jumper: Lion Cub Edition"</title>
+    <link type="image/png" sizes="32x32" rel="icon" href="icons8-jungle-flaticons-flat-32.png">
+    <link rel="stylesheet" href="doodlejump.css">
+    <script src="doodlejump.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="board"></canvas>
+        <div>
+            <h1>Jungle Jumper:Lion Cub Edition</h1>
+            <p>Your Score: <br><span id="scoreDisplay">0</span></p>
+            <span></span>
+            <div class="button">
+                <button onclick="moveDoodler()" id="Left">Left</button>
+                <button onclick="moveDoodler()" id="Right">Right</button>
+            </div>
+            <button id="Restart">Restart</button>
+            <div class="hide">
+                <img src="pngwing.com.png" id="imgShow" style="display: none;">
+                <h3 id="gameOverMessage" style="display: none;">Game Over !
+                    <br> Press 'Space' to Restart
+                </h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
