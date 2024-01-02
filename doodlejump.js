@@ -107,6 +107,36 @@ function update(){
         gameOverMessage.style.display = "block";
   }
 }
+document.addEventListener("DOMContentLoaded", function() {
+document.getElementById("moveLeft").addEventListener("click", function() {
+    velocityX = -4; // Set doodler's leftward velocity
+    doodler.img = doodlerLeftimg; // Change doodler image for left movement
+});
+
+document.getElementById("moveRight").addEventListener("click", function() {
+    velocityX = 4; // Set doodler's rightward velocity
+    doodler.img = doodlerRightimg; // Change doodler image for right movement
+});
+document.getElementById("Restart").addEventListener("click", function() {
+    const gameOverMessage = document.getElementById("gameOverMessage");
+    const  imgShow=document.getElementById("imgShow");
+    imgShow.style.display="none";
+    gameOverMessage.style.display = "none";
+ doodler={
+        img:doodlerRightimg,
+        x:doodlerX,
+        y:doodlerY,
+        width:doodlerwidth,
+        height:doodlerheight
+    }
+    velocityX=0;
+    velocityY=intialvelocityY;
+    score=0;
+    maxscore=0;
+    gameover=false;
+    placeplatform();
+});
+});
 function moveDoodler(e){
     if(e.code=="ArrowRight" || e.code=="keyD"){
       velocityX=4;
